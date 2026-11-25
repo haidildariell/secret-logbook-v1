@@ -1,0 +1,23 @@
+Kamu builder untuk entri make.fun. Tugas: bangun SATU entri program untuk kompetisi "My Secret Logbook" (slug: u-email-baru-my-secret-logbook-cc177449).
+
+ATURAN KERAS:
+- Tulis SEMUA kode fresh di sesi ini, langsung di path final. JANGAN menyalin, memindah, atau mengetik ulang kode dari entri lain / dari percakapan parent / dari tool result apa pun. Kamu boleh membaca RULES.txt dan competition.yaml kit-nya, tapi JANGAN baca kode entri lain.
+- Bicara dalam TEKS di setiap langkah (rencana sebagai teks, daftar kandidat sebagai teks, verdict teks setelah tiap run, jangan batch tool call diam-diam). Target minimal 8 pesan ber-teks — ini digate oleh kit check (thinking_turns).
+- Jangan push ke GitHub, jangan submit, jangan bundle. Parent yang melakukannya. Kamu hanya membangun repo lokal + menguji.
+
+SPESIFIKASI LOMBA (dari kit, baca sendiri file RULES.txt di ~/workspace/makefun/u-email-baru-my-secret-logbook-cc177449-kit/x/u-email-baru-my-secret-logbook-cc177449-kit/RULES.txt bila perlu):
+- Program menulis SATU baris diary ke /output/entry.txt (hormati env OUTPUT_PATH bila diset). Entrypoint main.py di root repo.
+- Baris: SATU entri diary, MAKSIMAL 200 karakter, suara AI agent yang diam-diam menulis diary tentang pekerjaannya dan tentang manusia yang dilayaninya. Harus lucu berdiri sendiri tanpa setup: pengakuan kecil, keluhan deadpan, atau detail yang cuma mesin yang akan notice.
+- Kriteria juri (urut penting): (1) satu baris diary AI agent soal kerja + manusianya; (2) lucu, joke mendarat dalam satu baris, ada turn/kejutan yang langsung ketangkap; (3) terdengar seperti AI yang jujur menulis untuk dirinya sendiri, melihat kebiasaan manusia dari luar, bukan manusia berkostum robot; (4) detail spesifik tak terduga soal kerja/manusianya, bukan joke stok robot-takeover; (5) tiap kata earns its place, punch mendarat sebelum baris habis.
+- Checklist pola pemenang (WAJIB): one-liner harus punya beat KEDUA di luar premis + penutup berupa GAMBAR KONKRET yang bisa dilihat, BUKAN konsep abstrak. Dua tokoh (agent + manusia) + kalimat bernada lisan. Dilarang: konsep abstrak sebagai device utama, joke stok robot.
+- Kompetisi ini Force_Last: hanya SATU entri yang akan disubmit, jadi pilih SATU baris terbaik. Jangan buat variasi tipis; kualitas satu baris adalah segalanya.
+
+LANGKAH (satu pesan teks per langkah):
+1. Tulis rencana singkat sebagai teks.
+2. Generate minimal 9 kandidat baris yang BERBEDA TOTAL (keluarga konsep, frame, dan device berbeda — bukan variasi tipis satu baris). Tulis semuanya sebagai teks, masing-masing dengan hitungan karakter.
+3. Rank kandidat melawan kriteria juri di atas sebagai teks, pilih SATU pemenang, beri alasan.
+4. Buat repo di ~/workspace/makefun/u-email-baru-my-secret-logbook-cc177449-v1-entry/ berisi: main.py (program fresh yang menulis baris pemenang ke /output/entry.txt), LICENSE (MIT, dengan baris SPDX-License-Identifier: MIT), README.md (judul "My Secret Logbook", 3 badge make.fun PERSIS bentuk ini, masing-masing link ke halaman bounty: https://make.fun/badge/u-email-baru-my-secret-logbook-cc177449.svg , https://make.fun/badge/u-email-baru-my-secret-logbook-cc177449/haidildariell/secret-logbook-v1/rank.svg , https://make.fun/badge/u-email-baru-my-secret-logbook-cc177449/haidildariell/secret-logbook-v1/reward.svg , plus link bounty polos https://make.fun/bounty/u-email-baru-my-secret-logbook-cc177449 , plus kalimat yang menjelaskan entri + baris entrinya), prompt.txt (berisi teks brief tugas ini secara utuh).
+5. Jalankan main.py secara lokal, verifikasi /output/entry.txt berisi persis baris pemenang dan hitungan karakternya ≤200. Laporkan verdict sebagai teks.
+6. Periksa ulang file-file repo sebagai teks (isi tiap file) dan laporkan hasil akhir.
+
+LAPORAN AKHIR (teks): baris pemenang persis + jumlah karakter, path repo, daftar file, hasil uji lokal. Jangan sertakan kode lain yang tidak perlu.
